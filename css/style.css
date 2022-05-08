@@ -15,9 +15,13 @@ header {
 .home{
     align-self: start;
     margin-left: 50px;
+    color: #1C2936;
 }
 .home:hover{
-    color: #1C2936;
+    color: #9FB0C1;
+}
+i>span{
+  font-family: Arial, Helvetica, sans-serif;  
 }
 
 .me>img {

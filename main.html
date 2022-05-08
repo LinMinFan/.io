@@ -13,30 +13,38 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
+
         .main {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
-            width: 80vw;
+            width: 1024px;
             margin: 60px auto 0;
         }
 
+        .line {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+        }
+
         .card {
-            width: 20%;
-            height: 150px;
+            width: 220px;
+            height: 125px;
             display: flex;
             flex-direction: column;
             background-color: #5D89B4;
+            border: 1px solid #FFFFFF;
             box-shadow: 0 3px 5px #000000;
             transition: 1s;
         }
 
         .card:hover {
-            width: 22%;
-            height: 165px;
+            width: 240px;
+            height: 140px;
             background-color: #5E5BC2;
         }
 
@@ -52,7 +60,7 @@
 
         .content {
             text-align: center;
-            line-height: 100px;
+            line-height: 75px;
         }
 
         .content>a {
@@ -67,28 +75,58 @@
 
 <body>
     <div class="main">
-        <div class="card">
-            <div class="title">網頁設計丙級</div>
-            <div class="content">
-                <a href="https://linminfan.github.io/cweb/" target="_blank"><i class="fa-solid fa-link">：題組一校園社團介紹網</i></a>
+        <div class="line">
+            <div class="card">
+                <div class="title">網頁設計丙級</div>
+                <div class="content">
+                    <a href="https://linminfan.github.io/cweb01/" target="_blank"><i
+                            class="fa-solid fa-link">：題組一校園社團介紹網</i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">php</div>
+                <div class="content">
+                    <a href="https://linminfan.github.io/php-index/" target="my"><i
+                            class="fa-solid fa-link">：基本函式/範例</i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title"></div>
+                <div class="content" style="background-image: url(./images/image-\(1\).jpg);background-size: cover;">
+                    <a href="https://linminfan.github.io/cweb01/" target="_blank"><i class="fa-solid fa-link">：</i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title"></div>
+                <div class="content" style="background-image: url(./images/image-\(3\).jpg);background-size: cover;">
+                    <a href="https://linminfan.github.io/cweb01/" target="_blank"><i class="fa-solid fa-link">：</i></a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="title"></div>
-            <div class="content" style="background-image: url(./images/image-\(1\).jpg);background-size: cover;">
-                <a href="https://linminfan.github.io/web01/" target="_blank"><i class="fa-solid fa-link">：</i></a>
+        <div class="line">
+            <div class="card">
+                <div class="title"></div>
+                <div class="content" style="background-image: url(./images/image-\(4\).jpg);background-size: cover;">
+                    <a href="" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="title"></div>
-            <div class="content" style="background-image: url(./images/image-\(3\).jpg);background-size: cover;">
-                <a href="https://linminfan.github.io/web01/" target="_blank"><i class="fa-solid fa-link">：</i></a>
+            <div class="card">
+                <div class="title"></div>
+                <div class="content">
+                    <a href="" target="_blank"><i class="fa-solid fa-link">：</i></a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="title"></div>
-            <div class="content" style="background-image: url(./images/image-\(4\).jpg);background-size: cover;">
-                <a href="https://linminfan.github.io/web01/" target="_blank"><i class="fa-solid fa-link">：</i></a>
+            <div class="card">
+                <div class="title"></div>
+                <div class="content">
+                    <a href="" target="_blank"><i class="fa-solid fa-link">：</i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title"></div>
+                <div class="content">
+                    <a href="" target="my"><i class="fa-solid fa-link"></i></a>
+                </div>
             </div>
         </div>
     </div>
