@@ -14,39 +14,56 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        * {
+       *{
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            text-align: center;
-            font-size: 60px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: #5D89B4;
-            font-style: italic;
-            text-decoration: none;
         }
-
-        .main {
+        body{
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
-        .design{
-            transition: 2s;
+        .energy{
+            position: relative;
+            width: 300px;
+            height: 300px;
         }
-        .design:hover{
-            color: #5E5BC2;
-            font-size: 78px;
+        .energy span{
+            position: absolute;
+            width: calc(300px + var(--i));
+            height: calc(300px + var(--i));
+            background: var(--clr);
+            border-radius: 50%;
+            transform-origin: calc(100px + var(--i));
+            animation-name: light;
+            animation-duration: var(--d);
+            animation-iteration-count: infinite;
+            mix-blend-mode:screen;
+            filter: blur(30px);
         }
-
+        .energy span:nth-child(even){
+            animation-direction: reverse;
+        }
+        @keyframes light{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="main">
-        <a href="./main.html" target="my">
-            <div class="design">
-                Design
-            </div>
-        </a>
+    <div class="energy">
+        <span style="--clr:#fcdb20;--i:20px;--d:2.5s;"></span>
+        <span style="--clr:#136fd8;--i:15px;--d:5s;"></span>
+        <span style="--clr:#ce0ac4;--i:18px;--d:7.5s;"></span>
+        <span style="--clr:#48bf0d;--i:25px;--d:10s;"></span>
+    </div>
     </div>
 </body>
 
