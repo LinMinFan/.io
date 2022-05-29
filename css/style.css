@@ -1,6 +1,91 @@
 * {
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    margin-top: 10px;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #180936;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    inset: -20px 75px;
+    background: linear-gradient(#00ccff,#d400d4);
+    transform: 0.5s;
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.box:hover::before{
+    inset: -20px 0px;
+}
+.box::after{
+    position: absolute;
+    content: "";
+    inset: 6px;
+    background: #180936;
+    border-radius: 50%;
+    z-index: 1;
+}
+.content{
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #070a1c;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.imgbx img{
+    width: 100%;
+    height: 100%;
+    
+}
+.box:hover .imgbx{
+    opacity: 0;
+}
+.content a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #d400d4;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+.content a:hover{
+    font-size: larger;
+}
 
 header {
     display: flex;
@@ -8,6 +93,7 @@ header {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    width: 100%;
     height: 35vh;
     background-color: #5E5BC2;
     background-image: linear-gradient(to bottom right,#5E5BC2,#5BC2BF);
@@ -32,16 +118,10 @@ header {
 i>span{
   font-family: Arial, Helvetica, sans-serif;  
 }
-
-.me>img {
-    width: 200px;
-    height: 200px;
-}
 .main {
     width: 100%;
-    height: 100vh;
-    background-image: url(https://i.picsum.photos/id/450/4288/2848.jpg?hmac=z5F4ae5WsMGGD0g8pfAXTRkiO5xI_KLb2jH5zP-w_rs);
-    background-size: cover;
+    height: 80vh;
+    background-color: #180936;
 }
 iframe{
     width: 100%;
