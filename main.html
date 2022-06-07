@@ -12,175 +12,104 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .main {
-            display: flex;
-            flex-wrap: wrap;
-            width: 1024px;
-            margin: 60px auto 0;
-        }
-
-        .line {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            margin-top: 25px;
-        }
-
-        .card {
-            width: 220px;
-            height: 125px;
-            display: flex;
-            flex-direction: column;
-            background-color: #5D89B4;
-            border: 1px solid #FFFFFF;
-            box-shadow: 0 3px 5px #000000;
-            transition: 1s;
-        }
-
-        .card:hover {
-            width: 240px;
-            height: 140px;
-            background-color: #5E5BC2;
-        }
-
-        .title {
-            background-color: #2C4A69;
-            background-image: linear-gradient(to bottom right, #2C4A69, #5D89B4);
-            background-size: cover;
-            height: 50px;
-            color: #FFFFFF;
-            text-align: center;
-            font-size: 20px;
-            line-height: 50px;
-            text-shadow: 2px 2px 2px lightgray;
-        }
-
-        .content {
-            text-align: center;
-            line-height: 75px;
-        }
-
-        .content>a {
-            color: #2C4A69;
-            font-size: 40px;
-        }
-
-        .content>a:hover {
-            color: #9ECFFF;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="main">
-        <div class="line">
-            <div class="card">
-                <a href="https://linminfan.github.io/php-index/" target="my">
-                    <div class="title">php基本函式/範例</div>
-                </a>
-                <div class="content">
-                    <a href="https://linminfan.github.io/php-index/" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://linminfan.github.io/js-index/" target="my">
-                    <div class="title">js基本函式/範例</div>
-                </a>
-                <div class="content">
-                    <a href="https://linminfan.github.io/js-index/" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://linminfan.github.io/database/" target="my">
-                    <div class="title">SQL資料庫</div>
-                </a>
-                <div class="content">
-                    <a href="https://linminfan.github.io/database/" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="./portfolio.html" target="my">
-                    <div class="title">作品集</div>
-                </a>
-                <div class="content">
-                    <a href="./portfolio.html" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="line">
-            <div class="card">
-                <a href="./bweb.html" target="my">
-                    <div class="title">乙級網頁設計</div>
-                </a>
-                <div class="content">
-                    <a href="./bweb.html" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="./cweb.html" target="my">
-                    <div class="title">丙級網頁設計</div>
-                </a>
-                <div class="content">
-                    <a href="./cweb.html" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="./resources.html" target="my">
-                    <div class="title">網路資源</div>
-                </a>
-                <div class="content">
-                    <a href="./resources.html" target="my"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://github.com/LinMinFan" target="blank">
-                    <div class="title">MyGitHub</div>
-                </a>
-                <div class="content">
-                    <a href="https://github.com/LinMinFan" target="blank"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="line">
-            <div class="card">
-                <a href="https://codepen.io/collection/aMWvaO" target="_blank">
-                    <div class="title">MyCodePen</div>
-                </a>
-                <div class="content">
-                    <a href="https://codepen.io/collection/aMWvaO" target="_blank"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://flic.kr/s/aHBqjzQoWL" target="blank">
-                    <div class="title">PS作品</div>
-                </a>
-                <div class="content">
-                    <a href="https://flic.kr/s/aHBqjzQoWL" target="blank"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://flic.kr/s/aHBqjzSh4b" target="blank">
-                    <div class="title">AI作品</div>
-                </a>
-                <div class="content">
-                    <a href="https://flic.kr/s/aHBqjzSh4b" target="blank"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://flic.kr/s/aHBqjzQwLm" target="blank">
-                    <div class="title">吸貓放鬆區</div>
-                </a>
-                <div class="content">
-                    <a href="https://flic.kr/s/aHBqjzQwLm" target="blank"><i class="fa-solid fa-cat"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            ul{
+                position: relative;
+                transform: skewY(-15deg);
+            }
+            ul:nth-child(1){
+                margin-right: 50px;
+            }
+            ul:nth-child(2){
+                margin-left: 50px;
+            }
+            ul li{
+                position: relative;
+                list-style: none;
+                width: 200px;
+                background: #434343;
+                padding: 15px;
+                transition: 0.5s;
+                z-index: var(--i);
+            }
+            ul li:hover{
+                background: #5959ff;
+                transform: translateX(var(--x));
+            }
+            ul li:hover a{
+                color: #434343;
+            }
+            ul li::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -40px;
+                width: 40px;
+                height: 100%;
+                background: #434343;
+                transform-origin: right;
+                transform: skewY(45deg);
+                transition: 0.5s;
+            }
+            ul li:hover:before{
+                background: #4d4de4;
+            }
+            ul li::after{
+                content: "";
+                position: absolute;
+                top: -40px;
+                left: 0px;
+                width: 100%;
+                height: 40px;
+                background: #434343;
+                transform-origin: bottom;
+                transform: skewX(45deg);
+                transition: 0.5s;
+            }
+            ul li:hover:after{
+                background: #4d4de4;
+            }
+            ul li:last-child:after{
+                box-shadow: -120px 120px 30px #706969;
+            }
+            ul li a{
+                text-decoration: none;
+                color: #b8acac;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: bold;
+    
+            }
+            
+            </style>
+    </head>
+    <body>
+        <ul>
+            <li style="--i:6;--x:-30px"><a href="https://linminfan.github.io/php-index/" target="my">php基本函式/範例</a></li>
+            <li style="--i:5;--x:-30px"><a href="https://linminfan.github.io/js-index/" target="my">js基本函式/範例</a></li>
+            <li style="--i:4;--x:-30px"><a href="https://linminfan.github.io/database/" target="my">SQL資料庫</a></li>
+            <li style="--i:3;--x:-30px"><a href="./bweb.html" target="my">乙級網頁設計</a></li>
+            <li style="--i:2;--x:-30px"><a href="./cweb.html" target="my">丙級網頁設計</a></li>
+            <li style="--i:1;--x:-30px"><a href="./resources.html" target="my">網路資源</a></li>
+        </ul>
+        <ul>
+            <li style="--i:6;--x:30px"><a href="./portfolio.html" target="my">作品集</a></li>
+            <li style="--i:5;--x:30px"><a href="https://github.com/LinMinFan" target="blank">MyGitHub</a></li>
+            <li style="--i:4;--x:30px"><a href="https://codepen.io/collection/aMWvaO" target="_blank">MyCodePen</a></li>
+            <li style="--i:3;--x:30px"><a href="https://flic.kr/s/aHBqjzQoWL" target="blank">PS作品</a></li>
+            <li style="--i:2;--x:30px"><a href="https://flic.kr/s/aHBqjzSh4b" target="blank">AI作品</a></li>
+            <li style="--i:1;--x:30px"><a href="https://flic.kr/s/aHBqjzQwLm" target="blank">吸貓放鬆區</a></li>
+        </ul>
+    </body>
+    </html>
