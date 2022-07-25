@@ -1,0 +1,131 @@
+<div class="containerbox">
+    <h1>Services</h1>
+    <div class="block"></div>
+    <div class="continer">
+        <div class="row p-3 outsidebox" style="min-height:500px;">
+            <div id="skillbox1" class="col-sm-6 d-flex flex-column justify-content-around"
+                style="background-color:#0000005a;">
+                <h5 class="text-center"><i class="fa-solid fa-pencil"></i></h5>
+                <h6 class="text-center">形象視覺設計</h6>
+                <p class="text-center">將文字轉換成吸睛的圖像，讓您順利。</p>
+            </div>
+            <div id="skillbox2" class="col-sm-6 d-flex flex-column justify-content-around"
+                style="background-color:#00000010;">
+                <h5 class="text-center"><i class="fa-solid fa-gears"></i></h5>
+                <h6 class="text-center">專屬客製型網站</h6>
+                <p class="text-center">製作最適合您，好看又好用的設計。</p>
+            </div>
+            <div id="skillbox3" class="col-sm-6 d-flex flex-column justify-content-around"
+                style="background-color:#00000010;">
+                <h5 class="text-center"><i class="fa-solid fa-screwdriver-wrench"></i></h5>
+                <h6 class="text-center">後台管理系統</h6>
+                <p class="text-center">簡單易用的後台管理系統，資料更新不求人。</p>
+            </div>
+            <div id="skillbox4" class="col-sm-6 d-flex flex-column justify-content-around"
+                style="background-color:#0000005a;">
+                <h5 class="text-center"><i class="fa-solid fa-store"></i></h5>
+                <h6 class="text-center">網路行銷</h6>
+                <p class="text-center">SEO網頁設計，排名優化。</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="skillsleft">
+                <h5>skills</h5>
+                <div class="progressBar mt-3">
+                    <h4 class="skillstext"><i class="fa-brands fa-html5"></i>HTML5</h4>
+                    <div class="progressBarContainer">
+                        <div class="progressBarValue value-100"></div>
+                    </div>
+                </div>
+                <div class="progressBar">
+                    <h4 class="skillstext"><i class="fa-brands fa-css3-alt"></i>CSS3</h4>
+                    <div class="progressBarContainer">
+                        <div class="progressBarValue value-100"></div>
+                    </div>
+                </div>
+                <div class="progressBar">
+                    <h4 class="skillstext"><i class="fa-brands fa-js"></i>JavaScript</h4>
+                    <div class="progressBarContainer">
+                        <div class="progressBarValue value-100"></div>
+                    </div>
+                </div>
+                <div class="progressBar">
+                    <h4 class="skillstext"><i class="fa-brands fa-php"></i>PHP</h4>
+                    <div class="progressBarContainer">
+                        <div class="progressBarValue value-100"></div>
+                    </div>
+                </div>
+                <div class="progressBar">
+                    <h4 class="skillstext"><i class="fa-solid fa-database"></i>MySQL</h4>
+                    <div class="progressBarContainer">
+                        <div class="progressBarValue value-100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillsright" style="width:85%;">
+                <div class="container skillsimages d-flex justify-content-between align-items-center" style="width:90%;height:32%;">
+                    <img src="./img/html.png" width="80px" height="112px">
+                    <img src="./img/css.png" width="80px" height="112px">
+                    <img src="./img/js.png" width="80px" height="112px">
+                </div>
+                <div class="container skillsimages d-flex justify-content-around align-items-center" style="width:100%;height:34%;">
+                    <img src="./img/php.png" width="100px" height="75">
+                    <img src="./img/sql.png" width="100px" height="75">
+                </div>
+                <div class="container skillsimages d-flex justify-content-around align-items-center" style="width:100%;height:34%;">
+                    <img src="./img/ps.png" width="100px" height="100px">
+                    <img src="./img/ai.png" width="100px" height="100px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*----------------------------------------------------*/
+        /* skillsright
+        ------------------------------------------------------ */
+        // Some random colors
+        const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+        const numBalls = 50;
+        const balls = [];
+        
+        for (let i = 0; i < numBalls; i++) {
+            $(".skillsright").append("<div class='balls'></div>");
+            let ball = $('.balls')[0];
+            //console.log($(ball));
+            ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+            ball.style.left = `${Math.floor(Math.random() * 60)}vw`;
+            ball.style.top = `${Math.floor(Math.random() * 40)}vh`;
+            ball.style.transform = `scale(${Math.random()})`;
+            ball.style.width = `${Math.random()}em`;
+            ball.style.height = ball.style.width;
+
+            balls.push(ball);
+            $(".skillsright").append(ball);
+        }
+
+        // Keyframes
+        balls.forEach((el, i, ra) => {
+            let to = {
+                x: Math.random() * (i % 2 === 0 ? -11 : 11),
+                y: Math.random() * 12
+            };
+
+            let anim = el.animate(
+                [{
+                        transform: "translate(0, 0)"
+                    },
+                    {
+                        transform: `translate(${to.x}rem, ${to.y}rem)`
+                    }
+                ], {
+                    duration: (Math.random() + 1) * 2000, // random duration
+                    direction: "alternate",
+                    fill: "both",
+                    iterations: Infinity,
+                    easing: "ease-in-out"
+                }
+            );
+        });
+    </script>
