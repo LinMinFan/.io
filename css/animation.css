@@ -188,3 +188,22 @@
   border-radius: 100%;
   opacity: 0.7;
 }
+
+/* portfolio Section
+********************************************************************* */
+
+#portfolio.active {
+  transform: scale(0) skewX(-30deg);
+  animation: poshow 1s linear forwards;
+}
+
+@keyframes poshow {
+  0% {
+    transform: scale(0) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) skewX(0deg);
+    opacity: 1;
+  }
+}

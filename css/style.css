@@ -330,9 +330,6 @@ nav ul a:hover {
 .progressBarValue {
     height: 8px;
     float: left;
-    background: #e55d87;
-
-/* Old browsers */
     background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
 }
 
@@ -378,6 +375,11 @@ nav ul a:hover {
 
 .value-100 {
     width: 100%;
+}
+/* portfolio */
+
+#portfolio{
+    opacity: 0;
 }
 
 

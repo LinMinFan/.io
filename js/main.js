@@ -69,18 +69,33 @@ $(document).ready(function($) {
         //About Section
         let abhd=$('#about').offset().top
         //console.log(abhd)
-        if (nowscroll >= (abhd / 2)) {
-            $('#about').addClass("aboutshow");
-        }
         
         //Skills Section
         let skhd=$('#skills').offset().top
+        let pfhd=$('#portfolio').offset().top
+        let cthd=$('#contact').offset().top
         //console.log(skhd)
-        if (nowscroll >= (skhd / 1.3)) {
+
+        if (nowscroll >= (abhd / 2) && nowscroll <= skhd) {
+            $('#about').addClass("aboutshow");
+        }else {
+            $('#about').removeClass("aboutshow");
+        }
+
+        if (nowscroll >= (skhd / 1.3) && nowscroll <= pfhd) {
             $('#skillbox1').addClass("skillshow");
             $('#skillbox2').addClass("skillshow");
             $('#skillbox3').addClass("skillshow");
             $('#skillbox4').addClass("skillshow");
+        }else {
+            $('#skillbox1').removeClass("skillshow");
+            $('#skillbox2').removeClass("skillshow");
+            $('#skillbox3').removeClass("skillshow");
+            $('#skillbox4').removeClass("skillshow");
+        }
+
+        if (nowscroll >= (pfhd)/1.5) {
+            $('#portfolio').addClass("active");
         }
     })
 });
