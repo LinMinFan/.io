@@ -380,6 +380,7 @@ nav ul a:hover {
 
 #portfolio{
     opacity: 0;
+    transition: 2s;
 }
 
 
