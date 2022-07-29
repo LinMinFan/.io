@@ -94,7 +94,7 @@ $(document).ready(function($) {
             $('#skillbox4').removeClass("skillshow");
         }
 
-        if (nowscroll >= (pfhd)/1.5) {
+        if (nowscroll >= pfhd) {
             $('#portfolio').addClass("active");
         }
     })
