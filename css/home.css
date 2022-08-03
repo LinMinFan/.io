@@ -264,7 +264,7 @@
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
     bottom: -180px;
     border-radius: 50%;
-    animation: square 25s infinite;
+    animation: square 18s infinite;
     transition-timing-function: linear;
   }
 
@@ -278,6 +278,7 @@
 
   .bg-bubbles li:nth-child(1) {
     left: var(--i);
+    animation-delay: 1s;
   }
 
   .bg-bubbles li:nth-child(2) {
@@ -297,12 +298,13 @@
     left: var(--i);
     width: 60px;
     height: 60px;
-    animation-duration: 19s;
-    background-color: rgba(255, 255, 255, 0.25);
+    animation-duration: 16s;
   }
 
   .bg-bubbles li:nth-child(5) {
     left: var(--i);
+    animation-delay: 3s;
+    animation-duration: 15s;
   }
 
   .bg-bubbles li:nth-child(6) {
@@ -310,7 +312,6 @@
     width: 120px;
     height: 120px;
     animation-delay: 3s;
-    background-color: rgba(255, 255, 255, 0.2);
   }
 
   .bg-bubbles li:nth-child(7) {
@@ -322,10 +323,10 @@
 
   .bg-bubbles li:nth-child(8) {
     left: var(--i);
-    width: 20px;
-    height: 20px;
-    animation-delay: 13s;
-    animation-duration: 40s;
+    width: 25px;
+    height: 25px;
+    animation-delay: 11s;
+    animation-duration: 30s;
   }
 
   .bg-bubbles li:nth-child(9) {
@@ -333,20 +334,33 @@
     width: 30px;
     height: 30px;
     animation-delay: 2s;
-    animation-duration: 40s;
-    background-color: rgba(255, 255, 255, 0.3);
+    animation-duration: 30s;
   }
 
   .bg-bubbles li:nth-child(10) {
     left: var(--i);
     width: 160px;
     height: 160px;
-    animation-delay: 9s;
+    animation-delay: 8s;
+    animation-duration: 12s;
+  }
+  .bg-bubbles li:nth-child(11) {
+    left: var(--i);
+    width: 90px;
+    height: 90px;
+    animation-delay: 7s;
+  }
+  .bg-bubbles li:nth-child(12) {
+    left: var(--i);
+    width: 60px;
+    height: 60px;
+    animation-delay: 4s;
+    animation-duration: 15s;
   }
 
   @keyframes square {
     0% {
-      transform:  translateY(0) scale(0.5);
+      transform:  translateY(0) scale(0.3);
       left: calc(var(--i) - 5%);
     }
 
@@ -359,7 +373,7 @@
     }
   
     100% {
-      transform: translateY(-1000px) scale(1);
+      transform: translateY(-1100px) scale(1.2);
       left: calc(var(--i) + 20%);
     }
   }
