@@ -29,7 +29,7 @@
     cursor: pointer;
     transition: 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0,1);
   }
 
   figure.front {
@@ -115,7 +115,6 @@
 
   .front:hover h2 {
     color: #fff;
-    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
     transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
   }
 
@@ -177,7 +176,6 @@
     transition: opacity .35s, transform .35s;
     transition-delay: 0.5s;
     transform: translate3d(-40px, 0, 0);
-    text-shadow: 1px 1px 3px #000;
   }
 
   .card.flipped .back dl {
@@ -236,4 +234,132 @@
 
 
   /* background */
+
+  .wrapper {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* margin-top: -200px; */
+    overflow: hidden;
+  }
+
+  .bg-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
   
+  .bg-bubbles li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+    bottom: -180px;
+    border-radius: 50%;
+    animation: square 25s infinite;
+    transition-timing-function: linear;
+  }
+
+  .bg-bubbles li::after{
+    content: "";
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
+
+  .bg-bubbles li:nth-child(1) {
+    left: var(--i);
+  }
+
+  .bg-bubbles li:nth-child(2) {
+    left: var(--i);
+    width: 80px;
+    height: 80px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+  }
+
+  .bg-bubbles li:nth-child(3) {
+    left: var(--i);
+    animation-delay: 4s;
+  }
+
+  .bg-bubbles li:nth-child(4) {
+    left: var(--i);
+    width: 60px;
+    height: 60px;
+    animation-duration: 19s;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .bg-bubbles li:nth-child(5) {
+    left: var(--i);
+  }
+
+  .bg-bubbles li:nth-child(6) {
+    left: var(--i);
+    width: 120px;
+    height: 120px;
+    animation-delay: 3s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .bg-bubbles li:nth-child(7) {
+    left: var(--i);
+    width: 130px;
+    height: 130px;
+    animation-delay: 6s;
+  }
+
+  .bg-bubbles li:nth-child(8) {
+    left: var(--i);
+    width: 20px;
+    height: 20px;
+    animation-delay: 13s;
+    animation-duration: 40s;
+  }
+
+  .bg-bubbles li:nth-child(9) {
+    left: var(--i);
+    width: 30px;
+    height: 30px;
+    animation-delay: 2s;
+    animation-duration: 40s;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .bg-bubbles li:nth-child(10) {
+    left: var(--i);
+    width: 160px;
+    height: 160px;
+    animation-delay: 9s;
+  }
+
+  @keyframes square {
+    0% {
+      transform:  translateY(0) scale(0.5);
+      left: calc(var(--i) - 5%);
+    }
+
+    15% {
+      left: calc(var(--i) + 10%);
+    }
+
+    45% {
+      left: calc(var(--i) + 1%);
+    }
+  
+    100% {
+      transform: translateY(-1000px) scale(1);
+      left: calc(var(--i) + 20%);
+    }
+  }
