@@ -82,8 +82,8 @@ header {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, #47C3E6 0%, #47C3E630 50%, #47C3E630 50%, #47C3E6);
 }
+
 
 .title {
     align-self: center;
