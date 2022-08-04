@@ -73,8 +73,8 @@ $(document).ready(function($) {
         //Skills Section
         let skhd=$('#skills').offset().top
         let pfhd=$('#portfolio').offset().top
-        let cthd=$('#contact').offset().top
-        //console.log(skhd)
+        let wh=$('#mywork h1').height()
+        //console.log(wh)
 
         if (nowscroll >= (abhd / 2) && nowscroll <= skhd) {
             $('#about').addClass("aboutshow");
@@ -94,8 +94,8 @@ $(document).ready(function($) {
             $('#skillbox4').removeClass("skillshow");
         }
 
-        if (nowscroll >= pfhd) {
-            $('#portfolio').addClass("active");
+        if (nowscroll >= (pfhd)-wh) {
+            $('#mypofbox').addClass("active");
         }
     })
 });

@@ -192,7 +192,18 @@
 /* portfolio Section
 ********************************************************************* */
 
-#portfolio.active {
-  opacity: 1;
+#mypofbox.active {
+  animation: work 0.5s linear forwards;
+}
+
+@keyframes work {
+  0% {
+    opacity: 0;
+    transform: rotate(-1080deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
 }
 

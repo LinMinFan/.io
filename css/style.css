@@ -378,9 +378,8 @@ nav ul a:hover {
 }
 /* portfolio */
 
-#portfolio{
+#mypofbox{
     opacity: 0;
-    transition: 2s;
 }
 
 
