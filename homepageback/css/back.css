@@ -1,0 +1,180 @@
+body {
+    background: linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgb(64, 128, 223) 100%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bktop{
+    /* position: absolute;
+    top:30px;
+    left: 50%;
+    transform: translateX(-50%); */
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 40px;
+}
+
+section{
+    min-height: 75vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.cent {
+    text-align: center;
+}
+/* 主內容區塊 */
+.main {
+    width: 100%;
+    display: flex;
+}
+
+.mainbox{
+    position: relative;
+    width: 90%;
+    /* min-height:90vh; */
+}
+
+.mainbox h2{
+    text-align: center;
+    color: #fff;
+}
+
+.tr_back{
+    background: #a7f51688;
+    text-align: center;
+}
+
+/* 左側選單區 */
+.menu {
+    width: 25%;
+    /* min-height: 90vh; */
+    padding: 50px 0;
+}
+
+.menu ul {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul li {
+    list-style: none;
+    padding: 10px 10px 10px 50px;
+}
+
+.menu ul li a::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    width: 8px;
+    height: 8px;
+    border-top: 3px solid #005780;
+    border-right: 3px solid #005780;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    /* text-shadow: 0.5px 0.5px 0 #ffffff; */
+    font-weight: 700;
+    transition: 0.5s;
+    line-height: 18px;
+}
+
+.menu ul li a:hover {
+    color: #727272;
+}
+
+.menu ul li a:hover::before {
+    color: #003cbc;
+    opacity: 1;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* 右側內容區     */
+.mycontent {
+    width: 75%;
+    min-height: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*--------------------
+modal
+---------------------*/
+
+#mmodal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    min-height: 60vh;
+    background: #fff;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 5px 5px 40px #032942;
+    display:none;
+}
+
+#modalcontent{
+    width: 100%;
+    height: 100%;
+}
+
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.modalbox {
+    width: 70%;
+    margin: 20px auto;
+}
+
+
+/*--------------------
+pages
+---------------------*/
+
+.pagebox{
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+}
+
+.pagebox a{
+    text-decoration: none;
+    color: #fff;
+}
